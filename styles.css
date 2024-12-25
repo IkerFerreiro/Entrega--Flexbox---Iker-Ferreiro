@@ -4,19 +4,17 @@
          url("fonts/Saiyan-Sans Left Oblique.ttf") format("truetype");
 }
 
-*{
+* {
     color: black;
     font-family: 'Saiyan-Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
 .logotipo {
-    display: flex;
-    flex-basis: 20%;
     width: 15rem;
     height: 7rem;
-
 }
 
 .menu {
@@ -26,9 +24,8 @@
 header > nav {
     padding: 1%;
     display: flex;
-    flex-grow: 1; 
-    position: relative;
-    z-index: 1; 
+    justify-content: space-between;
+    align-items: center; 
     background-color: rgba(194, 116, 15, 0.589);
     border-radius: 1.5rem;
 }
@@ -36,61 +33,60 @@ header > nav {
 #barra-nav-list {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     list-style: none;
     font-size: 1.3rem;
-    position: relative;
-    z-index: 1; 
 }
 
-.comic-list > ul , .figure-list > ul , .film-list > ul {
+.comic-list > ul,
+.figure-list > ul,
+.film-list > ul {
     display: flex;
-    flex-grow: 1;
-    list-style: none;
     justify-content: space-around;
-    width: 100%;
+    align-items: center; 
+    list-style: none;
     text-align: center;
     font-size: 1.2rem;
-    position: relative;
-    z-index: 1;   
+    width: 100%;
 }
 
 .background {
-    position: fixed;
+    position: fixed; 
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1; 
 }
 
 footer > nav {
     padding: 1%;
     display: flex;
-    flex-grow: 1; 
-    position: relative;
-    z-index: 1; 
+    justify-content: space-between; 
+    align-items: center; 
     background-color: rgba(194, 116, 15, 0.589);
     border-radius: 1.5rem;
-
 }
 
 #rrss {
     display: flex;
-    align-self: center;
+    justify-content: space-around; 
+    align-items: center; 
+    width: 30%;
+    font-size: 1.2rem;
     list-style: none;
-    width: 30%;   
-    font-size: 1.2rem;   
-    #texto-rrss {
-        margin-right: 20%;
-        font-size: 1.4rem;
-    }
-} 
+}
+
+#texto-rrss {
+    margin-right: 20%; 
+    font-size: 1.4rem;
+}
 
 #copyright {
     display: flex;
-    align-self: center;
-    position: relative;
-    left: 12%;
+    justify-content: center; 
+    align-items: center; 
     font-size: 1.2rem;
 }
 
@@ -99,48 +95,43 @@ footer > nav {
 }
 
 @media (max-width: 660px) {
-    .comic-list > ul, .figure-list > ul, .film-list > ul {
-        flex-direction: column;
-        align-items: center; 
+    .comic-list > ul,
+    .figure-list > ul,
+    .film-list > ul {
+        flex-direction: column; 
+        align-items: center;
         font-size: 1.5rem;
     }
 
     #rrss > li {
-        margin-right: 20%;
-        position: relative;
-        top: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;  
     }
 
     #copyright {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
         font-size: 1rem;
-        top: 3rem;
-        left: -1.5rem;
-        justify-content: center;
-        
+        padding-left: 5rem;
     }
-    
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1000px) {
     .ocultar {
         display: none;
-    } 
-    
-    
+    }
 }
 
 @media (max-width: 850px) {
     #barra-nav-list {
         display: none;
     }
-    
+
     .menu {
         display: flex;
-        position: relative;
         align-self: center;
-        top: -6.17rem;
-        left: 22rem;
-        z-index: 2;
+        justify-content: space-around;
     }
 }
