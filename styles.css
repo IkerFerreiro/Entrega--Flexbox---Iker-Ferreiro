@@ -115,6 +115,11 @@ footer > nav {
         align-self: center;
         font-size: 1rem;
         padding-left: 5rem;
+        margin-right: 1.5%;
+    }
+
+    #texto-rrss {
+        margin-left: 0.6rem;
     }
 }
 
